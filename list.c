@@ -3,7 +3,6 @@
 #include <assert.h>
 
 #include "list.h"
-#include "graphics.h"
 
 void list_new(list *list, int elementSize, freeFunction freeFn) {
     assert(elementSize > 0);
@@ -119,7 +118,7 @@ int list_count_occurences(list *list, void *data) {
     int i = 0;
 
     while(temp->next != NULL) {
-        if(!memcmp(temp->data, data, sizeof(POINT)))
+        if(!memcmp(temp->data, data, sizeof(list->elementSize)))
             i++;
         temp = temp->next;
     }
