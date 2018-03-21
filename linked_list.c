@@ -2,7 +2,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include "list.h"
+#include "linked_list.h"
 
 void list_new(list *list, int elementSize, freeFunction freeFn) {
     assert(elementSize > 0);
