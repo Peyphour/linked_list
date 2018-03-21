@@ -118,7 +118,7 @@ int list_count_occurences(list *list, void *data) {
     int i = 0;
 
     while(temp->next != NULL) {
-        if(!memcmp(temp->data, data, sizeof(list->elementSize)))
+        if(!memcmp(temp->data, data, list->elementSize))
             i++;
         temp = temp->next;
     }
